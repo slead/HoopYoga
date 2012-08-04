@@ -1,0 +1,135 @@
+/* CSS Document */
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal;}
+strong {font-weight:bold;}
+ul, li {}
+em {font-style:italic;}
+
+a {outline: none; text-decoration:none;color:#0066CC;}
+
+html		{overflow-y:scroll;}
+body		{font-family:Georgia, "Times New Roman", Times, serif; margin:0; color:#111; font-size:16px;}
+h1			{font-size:80px;}
+h2			{font-size:28px; text-align:center; }
+h3			{font-size:20px; color: #575757}
+p, table			{font-size:16px; line-height:24px; color: #575757; font-family:"proxima-nova-1", "proxima-nova-2", "Proxima Nova", Gotham, "Helvetica Neue", Helvetica, sans-serif;}
+ul			{font-size:16px; line-height:24px;}
+small		{font-size:14px;}
+.clear		{clear:both;}
+.gap		{height:30px;}
+.lucida		{font-family: "Lucida Grande", Tahoma; color:#FF0000;}
+#wrap		{margin:0 auto; min-width:768px; max-width:1300px; padding:20px 40px 0 40px;}
+#content	{margin:16px auto 0 auto; min-width:768px; max-width:1300px; padding:20px 40px; background-color:#EEE;}
+#background {display:none; background-color:#EEE;}
+.nowrap		{white-space:nowrap;}
+
+.class1			{
+    width:22%;
+    float:left;
+    margin-right:4%;
+}
+    
+.class1_last	{
+    width:22%;
+    float:left;
+    margin-right:0;
+}
+
+/* HEADER */
+#header			{text-align:center; margin-top:-60px; }
+#header h1		{letter-spacing:-2px; word-spacing:10px; margin:10px 0 -20px 0; line-height:1;}
+#header h3		{padding:24px 0; border-bottom:4px double #CCC;}
+#header img {
+
+    position: relative;
+    margin-left: 21px;
+    padding-top: 28px;
+    top: 39px;
+}
+span       {color:#FF0000;}
+
+img.image {
+    border: none;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+/* FOOTER */
+#footer small		{font:12px/24px "Lucida Grande", Verdana, Tahoma;}
+#footer				{margin:30px 0 10px 0; text-align:center; color:#575757;border-top:4px double #CCC;}
+#content #footer	{color:#CCC; margin:0;}
+
+/* jQuery popup window. Z-index of #mask must lower than #boxes .window */
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+  
+#boxes .window {
+  
+  position:absolute;
+  left:0;
+  top:0;
+  width:640px;
+  height:480px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+#boxes #dialog_about {
+  width:775px; 
+  height:600px;
+  padding:20px;
+  background-color:#ffffff;
+  position:fixed;
+  top:200px;
+  left:200px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;  
+}
+
+#boxes #dialog_classes {
+  width:650px; 
+  height:450px;
+  padding:20px;
+  background-color:#ffffff;
+  position:fixed;
+  top:200px;
+  left:200px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;  
+}
+
+#boxes #dialog_map {
+  width:680px; 
+  height:600px;
+  padding:10px;
+  background-color:#ffffff;
+  position:fixed;
+  top:200px;
+  left:200px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+#boxes .close {
+  float:right;
+}
+
+#boxes li {
+  margin-left:20px;
+  color: #575757  
+}
+
+td {
+	
+	width:	50%;
+	
+}

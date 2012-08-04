@@ -1,0 +1,212 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en"> 
+<head> 
+	<title>Hoop Yoga Sydney</title> 
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	
+	
+<script>
+
+$(document).ready(function() {	
+
+    //Execute the slideShow
+//	slideShow();
+
+	//select all the a tag with name equal to modal
+	$('a[name=modal]').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		//Get the A tag
+		var id = $(this).attr('href');
+	
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		
+		//transition effect		
+		$('#mask').fadeIn(1000);	
+		$('#mask').fadeTo("slow",0.8);	
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+	
+		//transition effect
+		$(id).fadeIn(2000); 
+	
+	});
+	
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});
+    
+    //if ESC is clicked
+    $(document).keyup(function(e) {
+    if(e.keyCode == 27) {
+        $('#mask').hide();
+        $('.window').hide();
+    }
+    });			
+	
+});
+
+</script>
+ 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+	<meta http-equiv="imagetoolbar" content="no"> 
+	<meta name="viewport" content="width = 1100"> 
+ 
+	<meta name="keywords" content="yoga, hoop, hula, hula hoop, hatha"> 
+	<meta name="description" content="Hoop Yoga is a fun and energetic fusion of hooping and yoga. The best way to get fit and have fun in Sydney's Eastern Suburbs."> 
+ 
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8"> 
+ 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23597431-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+  
+</head> 
+<body> 
+<div id="mask"></div>
+<div id="container">
+	<div id="wrap"> 
+		<div id="header"> 
+             
+			<img src="images/HoopYoga_logo.jpg" alt="Hoop Yoga" title="Hoop Yoga logo">
+			<h3>a unique blend of hoops, yoga and dance</h3> 
+		</div> 
+		<div id="nav"> 
+			<div class="class1"> 
+				<h2>About <span class="lucida">o</span></h2> 
+				<img class="image" src="images/class-1.jpg"/>
+				<p>Hoop Yoga is a combination of traditional yoga and the flow of hoop dance, taught by a fully qualified instructor.</p>
+                <p>The fusion of these two forms of exercise allows you to stretch, relax and explore the freedom of your body within the hoop.</p>
+				<p><a href="#dialog_about" name="modal">Read more...</a></p>
+			</div> 
+			<div class="class1"> 
+				<h2>Classes <span class="lucida">o</span></h2> 
+				<img class="image" src="images/class-2.jpg"/> 
+				<p>Classes are energetic and suitable for all levels, even if you've never picked up a hoop or been on a yoga mat.</p>
+                <p>Clear instructions are given on both yoga sequences and hooping drills so you can work at your own pace, at any level.</p>
+               
+				<p><a href="#dialog_classes" name="modal">Read more...</a></p>
+			</div> 
+			<div class="class1"> 
+				<h2>Timetable <span class="lucida">o</span></h2> 
+				<img class="image" src="images/class-3.jpg"/> 				
+				<p><strong>Next class:</strong></p>
+				<table>
+					<tr>
+						<td>Date:</td>
+						<td>Sat 12th May</td>
+					</tr>
+					<tr>
+						<td>Time:</td>
+						<td>8:30am - 9:30am</td>
+					</tr>
+					<tr>
+						<td>Location:</td>
+						<td>Bondi Pavilion</td>
+					</tr>
+					<tr>
+						<td>Cost:</td>
+						<td>$20 per person</td>
+					</tr>
+						
+				</table>
+				<p><a href="mailto:gloria@hoopyoga.com.au">Book your place now!</a></p>
+			</div> 
+			<div class="class1_last"> 
+				<h2>Contact <span class="lucida">o</span></h2> 
+				<img class="image" src="images/class-4.jpg"/>				
+				<p>Phone Gloria on <strong>0415 626 744</strong> or email <script>document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'a'+'i'+'l'+'&'+'#'+'1'+'1'+'6'+';'+'o'+'&'+'#'+'5'+'8'+';'+
+'G'+'l'+'o'+'r'+'i'+'a'+'&'+'#'+'6'+'4'+';'+'H'+'o'+'o'+'%'+'7'+'0'+'Y'+'o'+'g'+'&'+'#'+'9'+'7'+';'+
+'%'+'2'+'E'+'c'+'&'+'#'+'1'+'1'+'1'+';'+'m'+'&'+'#'+'4'+'6'+';'+'a'+'%'+'7'+'5'+"'"+'>'+'G'+'l'+'o'+
+'r'+'&'+'#'+'1'+'0'+'5'+';'+'a'+'&'+'#'+'6'+'4'+';'+'H'+'o'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+
+'2'+';'+'&'+'#'+'8'+'9'+';'+'o'+'g'+'a'+'&'+'#'+'4'+'6'+';'+'c'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+
+'0'+'9'+';'+'&'+'#'+'4'+'6'+';'+'a'+'u'+'<'+'/'+'a'+'>');</script><noscript>[Turn on JavaScript to see the email address]</noscript> to reserve your place in a class.</p> 
+				<p>Follow <a href="http://facebook.com/HoopYogaSydney">HoopYogaSydney</a> on Facebook for the latest happenings in hooping and yoga.</p>
+			</div> 
+		</div> 
+		
+	<div id="boxes">	
+        <div id="dialog_about" class="window">
+            <a href="#" class="close"/>X</a>
+            <h2>About Hoop Yoga</h2>
+            <p>Hoop yoga is a unique form of movement meditation which is practiced to music. Technical guidance on yoga postures <em>(asanas)</em> will prepare the body for hooping moves while the flowing exercises <em>(vinyasas)</em> and hoop dance session will provide a great cardiovascular workout. Breath control <em>(pranayama)</em> will also let you switch off the mind and connect with your body</p>
+            <p>Most importantly, hoop yoga is a fun way to exercise. Stepping into the hoop will make you feel like a child again. The hoops provided in class are not like the ones you played with as a kid - they are custom made, durable and hand-crafted for adults to exercise and dance with.</p>
+            <p>We encourage movement which feels good. Advice is provided on controlling the hoop and safely practicing yoga, but these classes are also about letting go.  Come and give it a whirl!</p>
+            <p>Key benefits of hoop yoga are:
+            <ul>
+                <li>stress relief</li>
+                <li>core strengthening</li>
+                <li>body conditioning</li>
+                <li>toning arms, legs, waist and hips</li>
+                <li>cardiovascular fitness</li>
+                <li>increased flexibility</li>
+                <li>complete workout for the body and mind</li>                
+            </ul>
+
+        </div>
+        
+        <div id="dialog_classes" class="window">
+            <a href="#"class="close"/>X</a>
+            <h2>Hoop Yoga Classes</h2>
+            <p>Gloria will take you through a series of uplifting stretches and moves that engage the whole body.  These classes are about feeling good whilst progressing with your yoga and hooping technique so we encourage you to be creative within the hoop and express your own style and movement.  The hoop is such a great tool for alignment and posture, and you'll find many creative ways to work within your circle.</p>  
+            <p>Hoop Yoga sessions are structured into workshop classes focusing on various parts of the body.  We will focus on different yoga and hooping aspects each week so we can progress and build up our stamina controlling the hoop.</p>
+            <p>Hoops and yoga mats are provided, or you can BYO.</p>     
+            <p>Drop-ins are always welcome - please email <script>document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'a'+'i'+'l'+'&'+'#'+'1'+'1'+'6'+';'+'o'+'&'+'#'+'5'+'8'+';'+
+'G'+'l'+'o'+'r'+'i'+'a'+'&'+'#'+'6'+'4'+';'+'H'+'o'+'o'+'%'+'7'+'0'+'Y'+'o'+'g'+'&'+'#'+'9'+'7'+';'+
+'%'+'2'+'E'+'c'+'&'+'#'+'1'+'1'+'1'+';'+'m'+'&'+'#'+'4'+'6'+';'+'a'+'%'+'7'+'5'+"'"+'>'+'G'+'l'+'o'+
+'r'+'&'+'#'+'1'+'0'+'5'+';'+'a'+'&'+'#'+'6'+'4'+';'+'H'+'o'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+
+'2'+';'+'&'+'#'+'8'+'9'+';'+'o'+'g'+'a'+'&'+'#'+'4'+'6'+';'+'c'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+
+'0'+'9'+';'+'&'+'#'+'4'+'6'+';'+'a'+'u'+'<'+'/'+'a'+'>');</script><noscript>[Turn on JavaScript to see the email address]</noscript> to ensure places are available.</p>
+        </div>  
+        
+        <div id="dialog_map" class="window">
+            <a href="#"class="close"/>X</a>
+            <h2>Hoop Yoga Location</h2>
+            
+        </div>               
+   </div>		
+
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=156939347706226&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/HoopYogaSydney" send="false" width="1000" show_faces="false" font=""></fb:like>
+    
+		<div id="footer"><small>Hoop Yoga, 2012</small></div> 
+	</div>  
+
+
+</body> 
+</html>
